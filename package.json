@@ -1,0 +1,19 @@
+{
+  "name": "challenge-11",
+  "version": "1.0.0",
+  "description": "Challenge 11",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ctjoseph1/Challenge-11.git"
+  },
+  "author": "Cara Joseph",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ctjoseph1/Challenge-11/issues"
+  },
+  "homepage": "https://github.com/ctjoseph1/Challenge-11#readme"
+}
