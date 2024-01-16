@@ -33,8 +33,9 @@ ${data.contributing}
 ${data.tests}
 
 ## Questions
-${data.questions}
-${data.questions2}
+
+GitHub Profile: ${data.questions}
+I can be contacted via email on: ${data.questions2}
 
 `;
 }

@@ -1,4 +1,4 @@
-# y
+# Cool thang
    
 
 ## Table of contents
@@ -11,23 +11,25 @@
 7. [Questions](#questions)
 
 ## Description
-y
+this that and that is that becaue that
 
 ## Installation
-y
+do it this way thanks
 
 ## Usage
-y
+however you like
 
 ## License
-[![License: MIT](https://img.shields.io/badge/License-None-yellow.svg)](https://opensource.org/licenses/None)
+[![License: MIT](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://opensource.org/licenses/GPL)
 
 ## Contributing
-y
+Cara and Cara
 
 ## Tests
-y
+None needed!
 
 ## Questions
-y
+
+GitHub Profile: git@git.github
+I can be contacted via email on: kdeife@.com
 
