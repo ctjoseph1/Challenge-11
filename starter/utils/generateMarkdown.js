@@ -1,5 +1,7 @@
 // function to generate markdown for README
 function generateMarkdown(data) {
+  const licenseBadge = generateLicenseBadge(data.license);
+  const licenseNotice = generateLicenseNotice(data.license);
   return `# ${data.title}
    
 
@@ -22,7 +24,7 @@ ${data.installation}
 ${data.usage}
 
 ## License
-${generateLicenseBatch(data.license)}
+${generateLicenseBadge(data.license)}
 
 ## Contributing
 ${data.contributing}
@@ -32,11 +34,12 @@ ${data.tests}
 
 ## Questions
 ${data.questions}
+${data.questions2}
 
 `;
 }
 
-function generateLicenseBatch(licenseName) {
+function generateLicenseBadge(licenseName) {
   // return `${licenseName} array is working`;
 if (licenseName=== 'MIT') {
   return '[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)'
@@ -47,6 +50,9 @@ if (licenseName=== 'MIT') {
 } else if (licenseName=== 'None'){
   return '[![License: MIT](https://img.shields.io/badge/License-None-yellow.svg)](https://opensource.org/licenses/None)'
 }
+}
+function generateLicenseNotice(licenseName) {
+  return `This project is licensed under the [${licenseName} License](https://opensource.org/licenses/${licenseName}).`;
 }
 
 
