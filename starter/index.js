@@ -2,6 +2,7 @@ const fs = require("fs");
 const path = require('path');
 const inquirer = require("inquirer");
 const generateMarkdown = require("./utils/generateMarkdown");
+const { default: CheckboxPrompt } = require("inquirer/lib/prompts/checkbox");
 
 // array of questions for user inquirer 9/10
 const questions = [
@@ -14,39 +15,51 @@ name: 'title',
     type:'input',
     message: 'Please describe the nature of your readme',
     name: 'description',
-}
+},
 {
     type:'input',
     message: 'Please enter the installation instructions',
     name: 'installation',
-}
+},
 {
     type:'input',
-    message: 'What are the usage terms?'
-    name: 'usage'
-}
+    message: 'What are the usage terms?',
+    name: 'usage',
+},
 {
     //When a user chooses a license for their application from a list of options then a badge for that license is added near the top of the README and a notice is added to the section of the README entitled License that explains which license the application is covered under
-    type:'input',
-    message: 'What Licensing?'
-    name: 'license'
-}
+    type:'list',
+    message: 'What Licensing would you like to use? Please choose',
+    name: 'license',
+    choices: ['MIT', 'GPL', 'Apache', 'None'],  
+
+    //prompt for user to choose the license
+    // inquirer.registerPrompt('checkbox-license', require('inquirer-checkbox-license-prompt'));
+
+    // inquirer.prompt({
+    //   type: 'checkbox-license',
+    //   choices: ['MIT', 'GPL', 'Apache', 'None'],  
+    // })
+// Process the user's choice
+  // Generate badge according to license ??
+//   const badge = ??
+},
 {
     type:'input',
-    message: 'Who are the contributors'
-    name: 'contributing'
-}
+    message: 'Who are the contributors',
+    name: 'contributing',
+},
 {
     type:'input',
-    message: ''
-    name: 'tests'
-}
+    message: '',
+    name: 'tests',
+},
 {
     //When a user enters their GitHub username then this is added to the section of the README entitled Questions, with a link to their GitHub profile
    //When a user enters their email address then this is added to the section of the README entitled Questions, with instructions on how to reach them with additional questions
     type:'input',
-    message: ''
-    name: 'questions'
+    message: 'Please enter a link to your github here:',
+    name: 'questions',
 }
 //When a user clicks on the links in the Table of Contents then they are taken to the corresponding section of the README
 ];
@@ -67,3 +80,4 @@ inquirer.prompt(questions)
 
 // function call to initialize program
 init();
+
