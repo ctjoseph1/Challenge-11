@@ -32,17 +32,6 @@ name: 'title',
     message: 'What Licensing would you like to use? Please choose',
     name: 'license',
     choices: ['MIT', 'GPL', 'Apache', 'None'],  
-
-    //prompt for user to choose the license
-    // inquirer.registerPrompt('checkbox-license', require('inquirer-checkbox-license-prompt'));
-
-    // inquirer.prompt({
-    //   type: 'checkbox-license',
-    //   choices: ['MIT', 'GPL', 'Apache', 'None'],  
-    // })
-// Process the user's choice
-  // Generate badge according to license ??
-//   const badge = ??
 },
 {
     type:'input',
@@ -60,6 +49,11 @@ name: 'title',
     type:'input',
     message: 'Please enter a link to your github here:',
     name: 'questions',
+},
+{
+     type:'input',
+    message: 'Please enter your email address that you can be reached at:',
+    name: 'questions2',
 }
 //When a user clicks on the links in the Table of Contents then they are taken to the corresponding section of the README
 ];
